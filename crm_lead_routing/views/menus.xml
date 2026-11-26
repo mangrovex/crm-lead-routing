@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_crm_routing_root" name="Lead Routing"
+              parent="crm.crm_menu_config" sequence="16" groups="sales_team.group_sale_manager"/>
+
+    <menuitem id="menu_crm_routing_rule" name="Rules" parent="menu_crm_routing_root"
+              action="action_crm_routing_rule" sequence="1"/>
+    <menuitem id="menu_crm_routing_member" name="Salespeople and Availability" parent="menu_crm_routing_root"
+              action="sales_team.crm_team_member_action" sequence="2"/>
+    <menuitem id="menu_crm_routing_expertise" name="Expertise Areas" parent="menu_crm_routing_root"
+              action="action_crm_routing_expertise" sequence="3"/>
+    <menuitem id="menu_crm_routing_log" name="Assignment Log" parent="menu_crm_routing_root"
+              action="action_crm_routing_log" sequence="4"/>
+</odoo>

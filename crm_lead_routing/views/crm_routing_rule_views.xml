@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_routing_rule_view_list" model="ir.ui.view">
+        <field name="name">crm.routing.rule.list</field>
+        <field name="model">crm.routing.rule</field>
+        <field name="arch" type="xml">
+            <list string="Routing Rules">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="channel" optional="show"/>
+                <field name="team_id"/>
+                <field name="assign_method"/>
+                <field name="expertise_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="show"/>
+                <field name="log_count" optional="show"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="crm_routing_rule_view_form" model="ir.ui.view">
+        <field name="name">crm.routing.rule.form</field>
+        <field name="model">crm.routing.rule</field>
+        <field name="arch" type="xml">
+            <form string="Routing Rule">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_logs" type="object" class="oe_stat_button" icon="fa-random">
+                            <field name="log_count" widget="statinfo" string="Assignments"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g. West Coast - Corporate accounts"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="sequence"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="criteria" string="Criteria">
+                            <div class="text-muted mb-2">
+                                Leave a criterion empty to ignore it. All defined criteria must match; within a
+                                criterion, any of its values is enough.
+                            </div>
+                            <group>
+                                <group name="criteria_channel" string="Channel">
+                                    <field name="channel"/>
+                                    <field name="lead_type"/>
+                                </group>
+                                <group name="criteria_region" string="Region">
+                                    <field name="country_ids" widget="many2many_tags"/>
+                                    <field name="state_ids" widget="many2many_tags"/>
+                                    <field name="city_names" placeholder="Austin, Dallas, Houston"/>
+                                </group>
+                                <group name="criteria_profile" string="Industry and Profile">
+                                    <field name="industry_ids" widget="many2many_tags"/>
+                                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                </group>
+                                <group name="criteria_utm" string="Marketing (UTM)">
+                                    <field name="campaign_ids" widget="many2many_tags"/>
+                                    <field name="source_ids" widget="many2many_tags"/>
+                                    <field name="medium_ids" widget="many2many_tags"/>
+                                </group>
+                            </group>
+                            <group name="criteria_advanced" string="Advanced Filter">
+                                <field name="domain" widget="domain" nolabel="1" colspan="2"
+                                       options="{'model': 'crm.lead', 'foldable': True}"/>
+                            </group>
+                        </page>
+                        <page name="assignment" string="Assignment">
+                            <group>
+                                <group>
+                                    <field name="team_id"/>
+                                    <field name="assign_method"/>
+                                    <field name="fallback" invisible="assign_method in ('leader', 'team_only')"/>
+                                </group>
+                                <group invisible="assign_method in ('leader', 'team_only')">
+                                    <field name="expertise_ids" widget="many2many_tags"
+                                           options="{'color_field': 'color'}"/>
+                                    <field name="respect_capacity"/>
+                                    <field name="balance_window_days" invisible="assign_method != 'balanced'"/>
+                                    <field name="balance_by_campaign" invisible="assign_method != 'balanced'"/>
+                                </group>
+                            </group>
+                            <div invisible="assign_method in ('leader', 'team_only')">
+                                <separator string="Eligible Salespeople Today"/>
+                                <field name="eligible_member_ids" readonly="1">
+                                    <list>
+                                        <field name="user_id" widget="many2one_avatar_user"/>
+                                        <field name="routing_expertise_ids" widget="many2many_tags"/>
+                                        <field name="routing_weight" string="Weight"/>
+                                        <field name="lead_month_count" string="30-day Leads"/>
+                                        <field name="assignment_max" string="30-day Capacity"/>
+                                        <field name="routing_open_lead_count" string="Open Leads"/>
+                                        <field name="routing_max_open_leads" string="Max. Open"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </page>
+                        <page name="notes" string="Notes">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_routing_rule_view_search" model="ir.ui.view">
+        <field name="name">crm.routing.rule.search</field>
+        <field name="model">crm.routing.rule</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="team_id"/>
+                <field name="campaign_ids"/>
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+                <group>
+                    <filter name="group_team" string="Team" context="{'group_by': 'team_id'}"/>
+                    <filter name="group_channel" string="Channel" context="{'group_by': 'channel'}"/>
+                    <filter name="group_method" string="Method" context="{'group_by': 'assign_method'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_crm_routing_rule" model="ir.actions.act_window">
+        <field name="name">Routing Rules</field>
+        <field name="res_model">crm.routing.rule</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create your first routing rule</p>
+            <p>Rules are evaluated by priority and the first matching rule decides the team and the
+               salesperson. A rule without criteria at the end of the list acts as the default rule.</p>
+        </field>
+    </record>
+</odoo>

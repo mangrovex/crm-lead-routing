@@ -1,0 +1,880 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_lead_routing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-26 05:39+0000\n"
+"PO-Revision-Date: 2026-11-26 05:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_419\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_member_view_form_routing
+msgid ""
+"\"Pause assignment\" and the 30-day capacity (Lead Assignment tab) are also\n"
+"                        respected by routing rules."
+msgstr ""
+"\"Pausar asignación\" y la capacidad de 30 días (pestaña Asignación) también se\n"
+"                        respetan en las reglas de enrutamiento."
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_team_member.py:0
+msgid "\"Unavailable from\" must be earlier than \"Unavailable until\"."
+msgstr "\"Ausente desde\" debe ser anterior a \"Ausente hasta\"."
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+msgid "%s lead(s) routed."
+msgstr "%s iniciativa(s) enrutada(s)."
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+msgid "%s without a matching rule."
+msgstr "%s sin regla aplicable."
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "30-day Capacity"
+msgstr "Capacidad 30 días"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "30-day Leads"
+msgstr "Iniciativas 30 días"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__active
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_routing_rule__domain
+msgid "Additional domain on crm.lead, e.g. [(\"expected_revenue\", \">\", 5000)]"
+msgstr ""
+"Dominio adicional sobre crm.lead, p. ej. [(\"expected_revenue\", \">\", "
+"5000)]"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__domain
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Advanced Filter"
+msgstr "Filtro avanzado"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_res_config_settings__crm_routing_auto_create
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.res_config_settings_view_form_routing
+msgid ""
+"Apply the routing rules to every lead created without a salesperson "
+"(incoming email, web forms, imports, integrations)."
+msgstr ""
+"Aplica las reglas de enrutamiento a toda iniciativa creada sin vendedor "
+"(correo entrante, formularios web, importaciones, integraciones)."
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_search
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields.selection,name:crm_lead_routing.selection__crm_routing_rule__fallback__leader
+msgid "Assign to the team leader"
+msgstr "Asignar al líder del equipo"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Assignment"
+msgstr "Asignación"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__log_count
+msgid "Assignment Count"
+msgstr "Nº asignaciones"
+
+#. module: crm_lead_routing
+#: model:ir.ui.menu,name:crm_lead_routing.menu_crm_routing_log
+msgid "Assignment Log"
+msgstr "Bitácora de asignaciones"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__assign_method
+msgid "Assignment Method"
+msgstr "Método de asignación"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__log_ids
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_graph
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_pivot
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Assignments"
+msgstr "Asignaciones"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Austin, Dallas, Houston"
+msgstr "Guayaquil, Samborondón, Durán"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_member_view_form_routing
+msgid "Availability and Workload"
+msgstr "Disponibilidad y carga"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_member_view_tree_routing
+msgid "Available"
+msgstr "Disponible"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__routing_is_available
+msgid "Available Today"
+msgstr "Disponible hoy"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__balance_by_campaign
+msgid "Balance per campaign"
+msgstr "Balancear por campaña"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Balanced (fewest assignments received)"
+msgstr "Balanceado (menos asignaciones recibidas)"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__balance_window_days
+msgid "Balancing Window (days)"
+msgstr "Ventana de balanceo (días)"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__campaign_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_search
+msgid "Campaign"
+msgstr "Campaña"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__campaign_ids
+msgid "Campaigns"
+msgstr "Campañas"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__channel
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__channel
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_search
+msgid "Channel"
+msgstr "Canal"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_lead__routing_channel
+msgid "Channel the lead came from; used by the routing rules."
+msgstr ""
+"Canal por el que llegó la iniciativa; lo usan las reglas de enrutamiento."
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__city_names
+msgid "Cities"
+msgstr "Ciudades"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__color
+msgid "Color"
+msgstr "Color"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_routing_rule__city_names
+msgid ""
+"Comma-separated list, case and accent insensitive. e.g. Austin, Dallas, "
+"Houston"
+msgstr ""
+"Lista separada por comas, sin distinguir mayúsculas ni tildes. Ej.: "
+"Guayaquil, Samborondón, Durán"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__company_id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: crm_lead_routing
+#: model:ir.model,name:crm_lead_routing.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: crm_lead_routing
+#: model:crm.routing.expertise,name:crm_lead_routing.crm_routing_expertise_corporate
+msgid "Corporate"
+msgstr "Corporativo"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__country_ids
+msgid "Countries"
+msgstr "Países"
+
+#. module: crm_lead_routing
+#: model_terms:ir.actions.act_window,help:crm_lead_routing.action_crm_routing_expertise
+msgid "Create expertise areas"
+msgstr "Cree áreas de experiencia"
+
+#. module: crm_lead_routing
+#: model_terms:ir.actions.act_window,help:crm_lead_routing.action_crm_routing_rule
+msgid "Create your first routing rule"
+msgstr "Cree su primera regla de enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__create_uid
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__create_uid
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__create_date
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__create_date
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields.selection,name:crm_lead_routing.selection__crm_routing_log__trigger__create
+msgid "Creation"
+msgstr "Creación"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Criteria"
+msgstr "Criterios"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__date
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_routing_rule__balance_window_days
+msgid "Days back counted by the \"Balanced\" method. 0 = full history."
+msgstr ""
+"Días hacia atrás que cuenta el método \"Balanceado\". 0 = todo el historial."
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__eligible_member_ids
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Eligible Salespeople Today"
+msgstr "Vendedores elegibles hoy"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__name
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__routing_expertise_ids
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_expertise_view_list
+msgid "Expertise"
+msgstr "Experiencia"
+
+#. module: crm_lead_routing
+#: model:ir.actions.act_window,name:crm_lead_routing.action_crm_routing_expertise
+#: model:ir.ui.menu,name:crm_lead_routing.menu_crm_routing_expertise
+msgid "Expertise Areas"
+msgstr "Áreas de experiencia"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_lead__id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team__id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__fallback
+msgid "If no salesperson is eligible"
+msgstr "Si no hay vendedor elegible"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+msgid "Import"
+msgstr "Importación"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_lead__routing_channel
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.view_crm_case_leads_filter_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.view_crm_case_opportunities_filter_routing
+msgid "Inbound Channel"
+msgstr "Canal de entrada"
+
+#. module: crm_lead_routing
+#: model:crm.routing.expertise,name:crm_lead_routing.crm_routing_expertise_individual
+msgid "Individuals / Families"
+msgstr "Personas / familias"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__industry_ids
+msgid "Industries"
+msgstr "Industrias"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_lead__industry_id
+msgid "Industry"
+msgstr "Industria"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Industry and Profile"
+msgstr "Industria y perfil"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+msgid "Integration / API"
+msgstr "Integración / API"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__write_uid
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__write_uid
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_expertise__write_date
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__write_date
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: crm_lead_routing
+#: model:ir.model,name:crm_lead_routing.model_crm_lead
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__lead_id
+#: model:ir.model.fields.selection,name:crm_lead_routing.selection__crm_routing_rule__lead_type__lead
+msgid "Lead"
+msgstr "Iniciativa"
+
+#. module: crm_lead_routing
+#: model:ir.ui.menu,name:crm_lead_routing.menu_crm_routing_root
+msgid "Lead Routing"
+msgstr "Enrutamiento de iniciativas"
+
+#. module: crm_lead_routing
+#: model:ir.model,name:crm_lead_routing.model_crm_routing_log
+msgid "Lead Routing Log"
+msgstr "Bitácora de enrutamiento de iniciativas"
+
+#. module: crm_lead_routing
+#: model:ir.model,name:crm_lead_routing.model_crm_routing_rule
+msgid "Lead Routing Rule"
+msgstr "Regla de enrutamiento de iniciativas"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid ""
+"Leave a criterion empty to ignore it. All defined criteria must match; within a\n"
+"                                criterion, any of its values is enough."
+msgstr ""
+"Deje vacío un criterio para no filtrar por él. Deben cumplirse todos los criterios\n"
+"                                definidos; dentro de cada criterio basta con uno de los valores."
+
+#. module: crm_lead_routing
+#: model:ir.model.fields.selection,name:crm_lead_routing.selection__crm_routing_rule__fallback__unassigned
+msgid "Leave without salesperson (team only)"
+msgstr "Dejar sin vendedor (solo equipo)"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Lowest workload (open leads)"
+msgstr "Menor carga de trabajo (iniciativas abiertas)"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+#: model:ir.model.fields.selection,name:crm_lead_routing.selection__crm_routing_log__trigger__manual
+msgid "Manual"
+msgstr "Manual"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Marketing (UTM)"
+msgstr "Marketing (UTM)"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Max. Open"
+msgstr "Máx. abiertas"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__routing_max_open_leads
+msgid "Max. Open Leads"
+msgstr "Máx. iniciativas abiertas"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_team_member__routing_max_open_leads
+msgid ""
+"Maximum number of open leads/opportunities for the salesperson. 0 = "
+"unlimited."
+msgstr ""
+"Carga máxima de iniciativas/oportunidades abiertas del vendedor. 0 = sin "
+"límite."
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__medium_ids
+msgid "Mediums"
+msgstr "Medios"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_search
+msgid "Method"
+msgstr "Método"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.view_crm_case_leads_filter_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.view_crm_case_opportunities_filter_routing
+msgid "Not Routed"
+msgstr "Sin enrutar"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__note
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_routing_rule__expertise_ids
+msgid "Only team members having ALL these expertise areas are considered."
+msgstr ""
+"Solo se consideran los vendedores del equipo que tengan TODAS estas áreas de"
+" experiencia."
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__routing_open_lead_count
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Open Leads"
+msgstr "Iniciativas abiertas"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_team_member.py:0
+msgid "Open leads of %s"
+msgstr "Iniciativas abiertas de %s"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields.selection,name:crm_lead_routing.selection__crm_routing_rule__lead_type__opportunity
+msgid "Opportunity"
+msgstr "Oportunidad"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__previous_user_id
+msgid "Previous Salesperson"
+msgstr "Vendedor anterior"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__sequence
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_member_view_form_routing
+msgid "Profile"
+msgstr "Perfil"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__reason
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Region"
+msgstr "Región"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__expertise_ids
+msgid "Required Expertise"
+msgstr "Experiencia requerida"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__respect_capacity
+msgid "Respect Capacity"
+msgstr "Respetar capacidad"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Round robin (rotation)"
+msgstr "Round robin (rotación)"
+
+#. module: crm_lead_routing
+#: model:ir.actions.server,name:crm_lead_routing.action_server_crm_lead_route
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_lead_view_form_routing
+msgid "Route"
+msgstr "Enrutar"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_res_config_settings__crm_routing_auto_create
+msgid "Route leads on creation"
+msgstr "Enrutar iniciativas al crearlas"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_lead_view_form_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_member_view_form_routing
+msgid "Routing"
+msgstr "Enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_lead__routing_date
+msgid "Routing Date"
+msgstr "Fecha de enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_lead__routing_log_ids
+msgid "Routing History"
+msgstr "Historial de enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.actions.act_window,name:crm_lead_routing.action_crm_routing_log
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_list
+msgid "Routing Log"
+msgstr "Bitácora de enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_lead__routing_rule_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "Routing Rule"
+msgstr "Regla de enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.actions.act_window,name:crm_lead_routing.action_crm_routing_rule
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team__routing_rule_ids
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_list
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_view_form_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.res_config_settings_view_form_routing
+msgid "Routing Rules"
+msgstr "Reglas de enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__routing_weight
+msgid "Routing Weight"
+msgstr "Peso de enrutamiento"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__rule_id
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__name
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_search
+msgid "Rule"
+msgstr "Regla"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Rule \"%(rule)s\": %(reason)s"
+msgstr "Regla \"%(rule)s\": %(reason)s"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Rule \"%s\": no eligible salesperson"
+msgstr "Regla \"%s\": sin vendedor elegible"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Rule \"%s\": no eligible salesperson, assigned to the team leader"
+msgstr "Regla \"%s\": sin vendedor elegible, se asigna al líder"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Rule \"%s\": team leader"
+msgstr "Regla \"%s\": líder del equipo"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Rule \"%s\": team only"
+msgstr "Regla \"%s\": solo equipo"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team__routing_rule_count
+msgid "Rule Count"
+msgstr "Nº reglas"
+
+#. module: crm_lead_routing
+#: model:ir.ui.menu,name:crm_lead_routing.menu_crm_routing_rule
+msgid "Rules"
+msgstr "Reglas"
+
+#. module: crm_lead_routing
+#: model_terms:ir.actions.act_window,help:crm_lead_routing.action_crm_routing_rule
+msgid ""
+"Rules are evaluated by priority and the first matching rule decides the team and the\n"
+"               salesperson. A rule without criteria at the end of the list acts as the default rule."
+msgstr ""
+"Las reglas se evalúan por prioridad y la primera que coincide decide el equipo y el\n"
+"               vendedor. Una regla sin criterios al final de la lista funciona como regla por defecto."
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_routing_rule__sequence
+msgid "Rules are evaluated in this order; the first matching rule assigns."
+msgstr "Las reglas se evalúan en este orden; la primera que coincide asigna."
+
+#. module: crm_lead_routing
+#: model:ir.model,name:crm_lead_routing.model_crm_routing_expertise
+msgid "Sales Expertise Area"
+msgstr "Área de experiencia de ventas"
+
+#. module: crm_lead_routing
+#: model:ir.model,name:crm_lead_routing.model_crm_team
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: crm_lead_routing
+#: model:ir.model,name:crm_lead_routing.model_crm_team_member
+msgid "Sales Team Member"
+msgstr "Miembro del equipo de ventas"
+
+#. module: crm_lead_routing
+#: model:ir.ui.menu,name:crm_lead_routing.menu_crm_routing_member
+msgid "Salespeople and Availability"
+msgstr "Vendedores y disponibilidad"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__user_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_search
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields.selection,name:crm_lead_routing.selection__crm_routing_log__trigger__cron
+msgid "Scheduled"
+msgstr "Programado"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_team_member__routing_weight
+msgid ""
+"Share of leads received compared to teammates with the \"Balanced\" and "
+"\"Lowest workload\" methods. A weight of 2 receives twice as many as a "
+"weight of 1."
+msgstr ""
+"Proporción de iniciativas que recibe frente a sus compañeros en los métodos "
+"\"Balanceado\" y \"Menor carga\". Un peso 2 recibe el doble que un peso 1."
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_routing_rule__respect_capacity
+msgid ""
+"Skip salespeople who reached their 30-day capacity or their maximum of open "
+"leads."
+msgstr ""
+"Excluye a quien alcanzó su capacidad de 30 días o su máximo de iniciativas "
+"abiertas."
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.res_config_settings_view_form_routing
+msgid "Smart Lead Routing"
+msgstr "Enrutamiento inteligente de iniciativas"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__source_ids
+msgid "Sources"
+msgstr "Fuentes"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__state_ids
+msgid "States"
+msgstr "Provincias"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__tag_ids
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__team_id
+msgid "Target Team"
+msgstr "Equipo destino"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__team_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_search
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_search
+msgid "Team"
+msgstr "Equipo"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Team leader"
+msgstr "Líder del equipo"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Team only (no salesperson)"
+msgstr "Solo equipo (sin vendedor)"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "The advanced filter of rule \"%(rule)s\" is not valid: %(error)s"
+msgstr "El filtro avanzado de la regla \"%(rule)s\" no es válido: %(error)s"
+
+#. module: crm_lead_routing
+#: model:ir.model.constraint,message:crm_lead_routing.constraint_crm_team_member_routing_max_open_positive
+msgid "The maximum of open leads cannot be negative."
+msgstr "La carga máxima no puede ser negativa."
+
+#. module: crm_lead_routing
+#: model:ir.model.constraint,message:crm_lead_routing.constraint_crm_team_member_routing_weight_positive
+msgid "The weight must be greater than zero."
+msgstr "El peso debe ser mayor que cero."
+
+#. module: crm_lead_routing
+#: model:ir.model.constraint,message:crm_lead_routing.constraint_crm_routing_expertise_name_uniq
+msgid "This expertise area already exists."
+msgstr "El área de experiencia ya existe."
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Top performer (won last month)"
+msgstr "Mejor desempeño (ganado el mes anterior)"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "Top seller by invoicing (last month)"
+msgstr "Mejor vendedor por facturación (mes anterior)"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_log__trigger
+msgid "Trigger"
+msgstr "Disparador"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_routing_rule__lead_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__routing_unavailable_from
+msgid "Unavailable from"
+msgstr "Ausente desde"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,field_description:crm_lead_routing.field_crm_team_member__routing_unavailable_until
+msgid "Unavailable until"
+msgstr "Ausente hasta"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_member_view_form_routing
+msgid "View"
+msgstr "Ver"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_lead.py:0
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_team_member_view_tree_routing
+msgid "Weight"
+msgstr "Peso"
+
+#. module: crm_lead_routing
+#: model:ir.model.fields,help:crm_lead_routing.field_crm_routing_rule__balance_by_campaign
+msgid ""
+"With \"Balanced\", only count assignments of the same campaign as the lead."
+msgstr ""
+"En \"Balanceado\", cuenta solo las asignaciones de la misma campaña de la "
+"iniciativa."
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_search
+msgid "Without Rule"
+msgstr "Sin regla"
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_log_view_search
+msgid "Without Salesperson"
+msgstr "Sin vendedor"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "balanced (%s previous assignments)"
+msgstr "balanceado (%s asignaciones previas)"
+
+#. module: crm_lead_routing
+#: model_terms:ir.actions.act_window,help:crm_lead_routing.action_crm_routing_expertise
+msgid ""
+"e.g. Health insurance, Corporate, Family plans. Assign them to salespeople\n"
+"               and require them in routing rules."
+msgstr ""
+"Ej.: Seguros de salud, Corporativo, Planes familiares. Se asignan a los vendedores\n"
+"               y las reglas pueden exigirlas."
+
+#. module: crm_lead_routing
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing.crm_routing_rule_view_form
+msgid "e.g. West Coast - Corporate accounts"
+msgstr "Ej.: Costa - Seguros corporativos"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "lowest workload (%s open)"
+msgstr "menor carga (%s abiertas)"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "round robin"
+msgstr "round robin"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "top invoicing %(start)s - %(end)s (%(score).2f)"
+msgstr "mayor facturación %(start)s - %(end)s (%(score).2f)"
+
+#. module: crm_lead_routing
+#. odoo-python
+#: code:addons/crm_lead_routing/models/crm_routing_rule.py:0
+msgid "top performer %(start)s - %(end)s (%(score).2f)"
+msgstr "mejor desempeño %(start)s - %(end)s (%(score).2f)"

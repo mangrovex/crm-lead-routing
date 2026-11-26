@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_team_member_view_tree_routing" model="ir.ui.view">
+        <field name="name">crm.team.member.view.list.routing</field>
+        <field name="model">crm.team.member</field>
+        <field name="inherit_id" ref="sales_team.crm_team_member_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="decoration-muted">not routing_is_available</attribute>
+            </xpath>
+            <field name="user_id" position="after">
+                <field name="routing_expertise_ids" widget="many2many_tags" options="{'color_field': 'color'}"
+                       optional="show"/>
+                <field name="routing_weight" string="Weight" optional="show"/>
+                <field name="routing_open_lead_count" optional="show"/>
+                <field name="routing_max_open_leads" optional="hide"/>
+                <field name="routing_unavailable_from" optional="hide"/>
+                <field name="routing_unavailable_until" optional="hide"/>
+                <field name="routing_is_available" string="Available" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="crm_team_member_view_form_routing" model="ir.ui.view">
+        <field name="name">crm.team.member.view.form.routing</field>
+        <field name="model">crm.team.member</field>
+        <field name="inherit_id" ref="crm.crm_team_member_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Routing" name="routing">
+                    <group>
+                        <group string="Profile">
+                            <field name="routing_expertise_ids" widget="many2many_tags"
+                                   options="{'color_field': 'color'}"/>
+                            <field name="routing_weight"/>
+                        </group>
+                        <group string="Availability and Workload">
+                            <field name="routing_is_available"/>
+                            <field name="routing_unavailable_from"/>
+                            <field name="routing_unavailable_until"/>
+                            <field name="routing_max_open_leads"/>
+                            <label for="routing_open_lead_count"/>
+                            <div class="o_row">
+                                <field name="routing_open_lead_count" class="oe_inline"/>
+                                <button name="action_routing_view_open_leads" type="object" string="View"
+                                        icon="oi-arrow-right" class="btn-link p-0"/>
+                            </div>
+                        </group>
+                    </group>
+                    <div class="text-muted">
+                        "Pause assignment" and the 30-day capacity (Lead Assignment tab) are also
+                        respected by routing rules.
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

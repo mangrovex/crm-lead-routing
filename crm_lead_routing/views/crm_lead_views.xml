@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_lead_view_form_routing" model="ir.ui.view">
+        <field name="name">crm.lead.form.routing</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_route" string="Route" type="object"
+                        groups="sales_team.group_sale_salesman_all_leads"
+                        invisible="not active or won_status != 'pending'"/>
+            </xpath>
+            <xpath expr="//page[@name='lead']" position="after">
+                <page name="routing" string="Routing">
+                    <group>
+                        <group>
+                            <field name="routing_channel"/>
+                            <field name="industry_id"/>
+                        </group>
+                        <group>
+                            <field name="routing_rule_id"/>
+                            <field name="routing_date"/>
+                        </group>
+                    </group>
+                    <field name="routing_log_ids" groups="sales_team.group_sale_manager">
+                        <list>
+                            <field name="date"/>
+                            <field name="rule_id"/>
+                            <field name="team_id"/>
+                            <field name="previous_user_id" widget="many2one_avatar_user"/>
+                            <field name="user_id" widget="many2one_avatar_user"/>
+                            <field name="trigger"/>
+                            <field name="reason"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_tree_view_leads_routing" model="ir.ui.view">
+        <field name="name">crm.lead.list.lead.routing</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="routing_channel" optional="hide"/>
+                <field name="routing_rule_id" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="crm_case_tree_view_oppor_routing" model="ir.ui.view">
+        <field name="name">crm.lead.list.opportunity.routing</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="routing_channel" optional="hide"/>
+                <field name="routing_rule_id" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_crm_case_leads_filter_routing" model="ir.ui.view">
+        <field name="name">crm.lead.search.lead.routing</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="industry_id"/>
+                <field name="routing_rule_id"/>
+                <filter name="not_routed" string="Not Routed" domain="[('routing_date', '=', False)]"/>
+                <filter name="group_routing_channel" string="Inbound Channel"
+                        context="{'group_by': 'routing_channel'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_crm_case_opportunities_filter_routing" model="ir.ui.view">
+        <field name="name">crm.lead.search.opportunity.routing</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="industry_id"/>
+                <field name="routing_rule_id"/>
+                <filter name="not_routed" string="Not Routed" domain="[('routing_date', '=', False)]"/>
+                <filter name="group_routing_channel" string="Inbound Channel"
+                        context="{'group_by': 'routing_channel'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_server_crm_lead_route" model="ir.actions.server">
+        <field name="name">Route</field>
+        <field name="model_id" ref="crm.model_crm_lead"/>
+        <field name="binding_model_id" ref="crm.model_crm_lead"/>
+        <field name="binding_view_types">list,kanban</field>
+        <field name="group_ids" eval="[(4, ref('sales_team.group_sale_salesman_all_leads'))]"/>
+        <field name="state">code</field>
+        <field name="code">action = records.action_route()</field>
+    </record>
+</odoo>

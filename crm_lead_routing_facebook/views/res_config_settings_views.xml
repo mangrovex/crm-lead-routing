@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_facebook" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.crm.facebook</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='crm']" position="inside">
+                <block title="Facebook Lead Ads" id="crm_lead_routing_facebook_block" groups="base.group_system">
+                    <setting id="crm_facebook_app" string="Facebook App"
+                             help="Create an App on developers.facebook.com, get the Lead Ads permissions approved in App Review and switch it to Live mode.">
+                        <div class="content-group">
+                            <div class="row mt8">
+                                <label for="crm_fb_app_id" class="col-lg-4 o_light_label"/>
+                                <field name="crm_fb_app_id"/>
+                            </div>
+                            <div class="row">
+                                <label for="crm_fb_app_secret" class="col-lg-4 o_light_label"/>
+                                <field name="crm_fb_app_secret" password="True"/>
+                            </div>
+                            <div class="row">
+                                <label for="crm_fb_api_url_host" class="col-lg-4 o_light_label"/>
+                                <field name="crm_fb_api_url_host"/>
+                            </div>
+                            <div class="row">
+                                <label for="crm_fb_lookback_days" class="col-lg-4 o_light_label"/>
+                                <field name="crm_fb_lookback_days"/>
+                            </div>
+                            <div class="row">
+                                <label for="crm_fb_access_token" class="col-lg-4 o_light_label"/>
+                                <field name="crm_fb_access_token" password="True"/>
+                            </div>
+                            <div class="mt8" invisible="not crm_fb_app_id or not crm_fb_app_secret">
+                                <button type="object" name="action_crm_fb_get_access_token"
+                                        string="Get Access Token" icon="oi-arrow-right" class="btn-link"/>
+                            </div>
+                            <div invisible="not crm_fb_access_token">
+                                <button type="object" name="action_crm_fb_get_pages"
+                                        string="Import Pages" icon="oi-arrow-right" class="btn-link"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

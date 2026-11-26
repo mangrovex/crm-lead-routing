@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_routing_rule_view_form_facebook" model="ir.ui.view">
+        <field name="name">crm.routing.rule.form.facebook</field>
+        <field name="model">crm.routing.rule</field>
+        <field name="inherit_id" ref="crm_lead_routing.crm_routing_rule_view_form"/>
+        <field name="arch" type="xml">
+            <field name="lead_type" position="after">
+                <field name="facebook_form_ids" widget="many2many_tags" invisible="channel not in (False, 'facebook')"/>
+            </field>
+        </field>
+    </record>
+</odoo>

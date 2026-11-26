@@ -1,0 +1,73 @@
+<section class="container">
+    <div class="row">
+        <div class="col-12 text-center" style="padding-top: 24px; padding-bottom: 8px;">
+            <h1 style="color: #265D6B; font-weight: 700;">Facebook Lead Ads Sync</h1>
+            <h4 style="color: #555555; font-weight: 400;">
+                Import the leads of your Facebook Lead Ads forms into Odoo CRM and route them automatically
+                with Smart Lead Routing.
+            </h4>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding-top: 16px;">
+    <div class="row">
+        <div class="col-md-4" style="padding: 12px;">
+            <div style="border: 1px solid #d5e3e6; border-radius: 8px; padding: 16px;">
+                <h5 style="color: #265D6B; font-weight: 700;">Pages and forms</h5>
+                <p>Import the pages managed by your Facebook user and their active lead forms, then choose which
+                   forms are downloaded by the hourly scheduled action.</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding: 12px;">
+            <div style="border: 1px solid #d5e3e6; border-radius: 8px; padding: 16px;">
+                <h5 style="color: #265D6B; font-weight: 700;">Field mapping</h5>
+                <p>Map each form question to a lead field (text, number, date, selection, many2one, country and
+                   state by code). Unmapped answers are kept in the lead notes.</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding: 12px;">
+            <div style="border: 1px solid #d5e3e6; border-radius: 8px; padding: 16px;">
+                <h5 style="color: #265D6B; font-weight: 700;">Routing</h5>
+                <p>Leads get the "Facebook Lead Ads" inbound channel. Routing rules can filter by form, and each
+                   form can force a rule or define a fallback team.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding-top: 24px;">
+    <h3 style="color: #265D6B; font-weight: 700;">Form configuration</h3>
+    <p>Fetch the form questions, review the proposed mapping, set the UTM campaign, source and medium, and decide
+       how its leads are routed. If campaign or medium are empty, the Facebook campaign and ad are used.</p>
+    <img src="fb_form.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Facebook form"/>
+
+    <h3 style="color: #265D6B; font-weight: 700; margin-top: 32px;">Leads with full traceability</h3>
+    <p>Each lead keeps its Facebook lead ID, page, form, campaign, ad set and ad, and the routing history shows
+       which rule assigned it.</p>
+    <img src="lead_routing.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Lead from Facebook"/>
+
+    <h3 style="color: #265D6B; font-weight: 700; margin-top: 32px;">Setup</h3>
+    <ol>
+        <li>Create an App on developers.facebook.com and get the Lead Ads permissions approved in App Review
+            (leads_retrieval, pages_show_list, pages_manage_ads, pages_read_engagement, ads_management).</li>
+        <li>In <b>CRM &gt; Configuration &gt; Settings &gt; Facebook Lead Ads</b>, enter the App ID and App Secret
+            and click <b>Get Access Token</b>. Add your Odoo URL followed by <code>/crm_lead_routing_facebook/auth</code>
+            as a valid OAuth redirect URI in the App.</li>
+        <li>Click <b>Import Pages</b>, then <b>Import Forms</b> on each page.</li>
+        <li>Enable <b>Fetch Leads</b> on the forms to synchronize and create routing rules.</li>
+    </ol>
+    <img src="settings.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Settings"/>
+</section>
+
+<section class="container" style="padding-top: 32px; padding-bottom: 32px;">
+    <h3 style="color: #265D6B; font-weight: 700;">External service and data</h3>
+    <p>This module connects to the Meta Graph API (graph.facebook.com) only after an administrator enters the App
+       credentials in Settings. It sends the App and page access tokens to Meta and receives your pages, forms
+       and leads. Tokens are stored in your database and are only visible to administrators. No data is sent to
+       any other party. The Graph API version is configurable (v26.0 by default).</p>
+    <p>Requires the <b>Smart Lead Routing</b> module (crm_lead_routing). Works on Odoo 19 Community and Enterprise.
+       Spanish translation included.</p>
+    <p style="color: #777777;">Based on the crm_facebook_leads module by BADEP and Vauxoo (AGPL-3), rewritten for
+       Odoo 19. Licensed under AGPL-3.</p>
+</section>

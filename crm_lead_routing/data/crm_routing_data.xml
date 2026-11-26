@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="crm_routing_expertise_corporate" model="crm.routing.expertise">
+            <field name="name">Corporate</field>
+        </record>
+        <record id="crm_routing_expertise_individual" model="crm.routing.expertise">
+            <field name="name">Individuals / Families</field>
+        </record>
+    </data>
+</odoo>

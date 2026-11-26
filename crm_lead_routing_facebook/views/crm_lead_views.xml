@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_lead_view_form_facebook" model="ir.ui.view">
+        <field name="name">crm.lead.form.facebook</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm_lead_routing.crm_lead_view_form_routing"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='routing']" position="after">
+                <page name="facebook" string="Facebook" invisible="not facebook_lead_id">
+                    <group>
+                        <group>
+                            <field name="facebook_lead_id"/>
+                            <field name="facebook_date_create"/>
+                            <field name="facebook_is_organic"/>
+                            <field name="facebook_page_id"/>
+                            <field name="facebook_form_id"/>
+                        </group>
+                        <group>
+                            <field name="facebook_campaign_id"/>
+                            <field name="facebook_adset_id"/>
+                            <field name="facebook_ad_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_crm_case_leads_filter_facebook" model="ir.ui.view">
+        <field name="name">crm.lead.search.lead.facebook</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="facebook_form_id"/>
+                <filter name="from_facebook" string="From Facebook" domain="[('facebook_lead_id', '!=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_crm_case_opportunities_filter_facebook" model="ir.ui.view">
+        <field name="name">crm.lead.search.opportunity.facebook</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="facebook_form_id"/>
+                <filter name="from_facebook" string="From Facebook" domain="[('facebook_lead_id', '!=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

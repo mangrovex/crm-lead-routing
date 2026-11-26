@@ -1,0 +1,88 @@
+<section class="container">
+    <div class="row">
+        <div class="col-12 text-center" style="padding-top: 24px; padding-bottom: 8px;">
+            <h1 style="color: #714B67; font-weight: 700;">Smart Lead Routing</h1>
+            <h4 style="color: #555555; font-weight: 400;">
+                Not every lead should go to the same salesperson. Route each lead to the right team and
+                person by region, industry, expertise, workload and availability.
+            </h4>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding-top: 16px;">
+    <div class="row">
+        <div class="col-md-4" style="padding: 12px;">
+            <div style="border: 1px solid #e3dce2; border-radius: 8px; padding: 16px;">
+                <h5 style="color: #714B67; font-weight: 700;">Prioritized rules</h5>
+                <p>Rules are evaluated by priority and the first match decides the team and the salesperson.
+                   Filter by inbound channel, country, state, city, industry, tags, UTM campaign, source,
+                   medium, lead type and any advanced domain.</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding: 12px;">
+            <div style="border: 1px solid #e3dce2; border-radius: 8px; padding: 16px;">
+                <h5 style="color: #714B67; font-weight: 700;">Expertise and availability</h5>
+                <p>Built on native sales team members: add expertise areas, a routing weight, absence dates
+                   and a maximum of open leads. "Pause assignment" and the 30-day capacity are respected.</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding: 12px;">
+            <div style="border: 1px solid #e3dce2; border-radius: 8px; padding: 16px;">
+                <h5 style="color: #714B67; font-weight: 700;">Seven assignment methods</h5>
+                <p>Team leader, round robin, balanced (fewest assignments, per campaign if needed),
+                   lowest workload, top performer, top seller by invoicing (with Invoicing installed)
+                   and team only.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding-top: 24px;">
+    <h3 style="color: #714B67; font-weight: 700;">Routing rules</h3>
+    <p>Order rules by drag and drop. A rule without criteria at the end of the list works as the default rule.</p>
+    <img src="rules_list.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Routing rules list"/>
+
+    <h3 style="color: #714B67; font-weight: 700; margin-top: 32px;">Criteria</h3>
+    <p>Empty criteria are ignored. All defined criteria must match; within a criterion, any of its values is
+       enough. City matching is case and accent insensitive.</p>
+    <img src="rule_criteria.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Rule criteria"/>
+
+    <h3 style="color: #714B67; font-weight: 700; margin-top: 32px;">Assignment</h3>
+    <p>Choose the target team and the method, require expertise and capacity, and decide what happens when
+       nobody is eligible. The rule shows who is eligible today.</p>
+    <img src="rule_assignment.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Rule assignment"/>
+
+    <h3 style="color: #714B67; font-weight: 700; margin-top: 32px;">Salespeople and availability</h3>
+    <p>Each team member gets a Routing tab with expertise, weight, absence dates and a maximum of open leads.</p>
+    <img src="member_routing.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Team member routing"/>
+
+    <h3 style="color: #714B67; font-weight: 700; margin-top: 32px;">Routing log</h3>
+    <p>Every assignment is logged with its rule, team, previous and new salesperson, trigger and reason.
+       Analyze it in list, pivot and graph views.</p>
+    <img src="log_list.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Routing log"/>
+
+    <h3 style="color: #714B67; font-weight: 700; margin-top: 32px;">On the lead</h3>
+    <p>Use the <b>Route</b> button or the <b>Route</b> action on several leads from the list. The Routing tab
+       shows the inbound channel, the industry, the applied rule and the history.</p>
+    <img src="lead_routing.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Lead routing tab"/>
+
+    <h3 style="color: #714B67; font-weight: 700; margin-top: 32px;">Automatic routing</h3>
+    <p>Enable <b>Route leads on creation</b> in CRM settings to route every lead created without a salesperson:
+       incoming emails, web forms, imports and integrations.</p>
+    <img src="settings.png" class="img-fluid" style="border: 1px solid #dddddd; border-radius: 6px;" alt="Settings"/>
+</section>
+
+<section class="container" style="padding-top: 32px; padding-bottom: 32px;">
+    <h3 style="color: #714B67; font-weight: 700;">For developers</h3>
+    <ul>
+        <li>Add inbound channels by extending <code>crm.lead._selection_routing_channel()</code>.</li>
+        <li>Add criteria with <code>crm.routing.rule._match_extra(lead)</code>.</li>
+        <li>Add assignment methods by extending <code>_selection_assign_method()</code> and implementing
+            <code>_pick_&lt;method&gt;(lead, members)</code>.</li>
+        <li>Decide what happens without a matching rule with <code>crm.lead._routing_fallback(trigger)</code>.</li>
+        <li>Create already routed leads with the context keys <code>crm_routing_auto</code> and
+            <code>crm_routing_rule_id</code>.</li>
+    </ul>
+    <p>Works on Odoo 19 Community and Enterprise. Only depends on CRM. Spanish translation included.</p>
+</section>

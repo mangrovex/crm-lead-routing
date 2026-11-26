@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_routing_expertise_view_list" model="ir.ui.view">
+        <field name="name">crm.routing.expertise.list</field>
+        <field name="model">crm.routing.expertise</field>
+        <field name="arch" type="xml">
+            <list string="Expertise" editable="bottom">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+                <field name="active" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_crm_routing_expertise" model="ir.actions.act_window">
+        <field name="name">Expertise Areas</field>
+        <field name="res_model">crm.routing.expertise</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create expertise areas</p>
+            <p>e.g. Health insurance, Corporate, Family plans. Assign them to salespeople
+               and require them in routing rules.</p>
+        </field>
+    </record>
+</odoo>

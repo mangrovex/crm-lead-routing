@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Pages -->
+    <record id="crm_facebook_page_view_list" model="ir.ui.view">
+        <field name="name">crm.facebook.page.list</field>
+        <field name="model">crm.facebook.page</field>
+        <field name="arch" type="xml">
+            <list string="Facebook Pages">
+                <field name="label"/>
+                <field name="name"/>
+                <field name="form_count"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="crm_facebook_page_view_form" model="ir.ui.view">
+        <field name="name">crm.facebook.page.form</field>
+        <field name="model">crm.facebook.page</field>
+        <field name="arch" type="xml">
+            <form string="Facebook Page">
+                <header>
+                    <button name="action_get_forms" type="object" string="Import Forms" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="label"/>
+                            <field name="name"/>
+                        </group>
+                        <group groups="base.group_system">
+                            <field name="access_token" password="True"/>
+                        </group>
+                    </group>
+                    <field name="form_ids" context="{'default_page_id': id}">
+                        <list>
+                            <field name="name"/>
+                            <field name="facebook_form_id"/>
+                            <field name="get_leads"/>
+                            <field name="routing_rule_id"/>
+                            <field name="team_id"/>
+                            <field name="campaign_id"/>
+                            <field name="last_fetch"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_crm_facebook_page" model="ir.actions.act_window">
+        <field name="name">Facebook Pages</field>
+        <field name="res_model">crm.facebook.page</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Connect your Facebook pages</p>
+            <p>Configure the App in Settings &gt; CRM &gt; Facebook Lead Ads and use "Import Pages".</p>
+        </field>
+    </record>
+
+    <!-- Forms -->
+    <record id="crm_facebook_form_view_list" model="ir.ui.view">
+        <field name="name">crm.facebook.form.list</field>
+        <field name="model">crm.facebook.form</field>
+        <field name="arch" type="xml">
+            <list string="Facebook Forms">
+                <field name="name"/>
+                <field name="page_id"/>
+                <field name="facebook_form_id" optional="hide"/>
+                <field name="get_leads"/>
+                <field name="routing_rule_id" optional="show"/>
+                <field name="team_id" optional="show"/>
+                <field name="campaign_id" optional="hide"/>
+                <field name="lead_count"/>
+                <field name="last_fetch" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="crm_facebook_form_view_form" model="ir.ui.view">
+        <field name="name">crm.facebook.form.form</field>
+        <field name="model">crm.facebook.form</field>
+        <field name="arch" type="xml">
+            <form string="Facebook Form">
+                <header>
+                    <button name="action_fetch_leads" type="object" string="Fetch Leads" class="oe_highlight"/>
+                    <button name="action_get_fields" type="object" string="Read Fields"
+                            confirm="The current mapping of this form will be replaced. Continue?"/>
+                    <button name="action_guess_mapping" type="object" string="Guess Mapping"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_leads" type="object" class="oe_stat_button" icon="fa-star">
+                            <field name="lead_count" widget="statinfo" string="Leads"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Facebook">
+                            <field name="page_id"/>
+                            <field name="facebook_form_id"/>
+                            <field name="get_leads"/>
+                            <field name="last_fetch"/>
+                        </group>
+                        <group string="Routing">
+                            <field name="routing_rule_id"/>
+                            <field name="team_id"/>
+                        </group>
+                        <group string="Marketing (UTM)">
+                            <field name="campaign_id"/>
+                            <field name="medium_id"/>
+                            <field name="source_id"/>
+                        </group>
+                    </group>
+                    <separator string="Field Mapping"/>
+                    <field name="field_ids">
+                        <list editable="bottom">
+                            <field name="name"/>
+                            <field name="facebook_field"/>
+                            <field name="odoo_field" options="{'no_create': True}"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_crm_facebook_form" model="ir.actions.act_window">
+        <field name="name">Facebook Forms</field>
+        <field name="res_model">crm.facebook.form</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Default mapping -->
+    <record id="crm_facebook_form_mapping_view_list" model="ir.ui.view">
+        <field name="name">crm.facebook.form.mapping.list</field>
+        <field name="model">crm.facebook.form.mapping</field>
+        <field name="arch" type="xml">
+            <list string="Default Mapping" editable="bottom">
+                <field name="facebook_field"/>
+                <field name="odoo_field" options="{'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_crm_facebook_form_mapping" model="ir.actions.act_window">
+        <field name="name">Default Mapping</field>
+        <field name="res_model">crm.facebook.form.mapping</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <menuitem id="menu_crm_facebook_root" name="Facebook Lead Ads" parent="crm.crm_menu_config"
+              sequence="17" groups="sales_team.group_sale_manager"/>
+    <menuitem id="menu_crm_facebook_page" name="Pages" parent="menu_crm_facebook_root"
+              action="action_crm_facebook_page" sequence="1"/>
+    <menuitem id="menu_crm_facebook_form" name="Forms" parent="menu_crm_facebook_root"
+              action="action_crm_facebook_form" sequence="2"/>
+    <menuitem id="menu_crm_facebook_form_mapping" name="Default Mapping" parent="menu_crm_facebook_root"
+              action="action_crm_facebook_form_mapping" sequence="3"/>
+</odoo>

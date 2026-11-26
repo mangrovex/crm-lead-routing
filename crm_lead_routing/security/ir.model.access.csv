@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_routing_rule_manager,crm.routing.rule.manager,model_crm_routing_rule,sales_team.group_sale_manager,1,1,1,1
+access_crm_routing_rule_user,crm.routing.rule.user,model_crm_routing_rule,sales_team.group_sale_salesman,1,0,0,0
+access_crm_routing_expertise_manager,crm.routing.expertise.manager,model_crm_routing_expertise,sales_team.group_sale_manager,1,1,1,1
+access_crm_routing_expertise_user,crm.routing.expertise.user,model_crm_routing_expertise,sales_team.group_sale_salesman,1,0,0,0
+access_crm_routing_log_manager,crm.routing.log.manager,model_crm_routing_log,sales_team.group_sale_manager,1,1,1,1
+access_crm_routing_log_user,crm.routing.log.user,model_crm_routing_log,sales_team.group_sale_salesman,1,0,0,0

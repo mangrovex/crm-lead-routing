@@ -1,0 +1,555 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_lead_routing_facebook
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-26 05:39+0000\n"
+"PO-Revision-Date: 2026-11-26 05:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_419\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_crm_facebook_form_mapping_map_unique
+msgid "A mapping already exists for this Facebook field."
+msgstr "Ya existe un mapeo para este campo de Facebook."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_res_config_settings__crm_fb_access_token
+msgid "Access Token"
+msgstr "Token de acceso"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__active
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_adset_id
+msgid "Ad Set"
+msgstr "Conjunto de anuncios"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__facebook_adset_id
+msgid "Ad Set ID"
+msgstr "ID conjunto de anuncios"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,help:crm_lead_routing_facebook.field_crm_facebook_form__routing_rule_id
+msgid ""
+"Always apply this rule to the leads of this form. If empty, all rules are "
+"evaluated by priority."
+msgstr ""
+"Aplica siempre esta regla a las iniciativas del formulario. Si se deja vacía"
+" se evalúan todas las reglas por prioridad."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_res_config_settings__crm_fb_app_id
+msgid "App ID"
+msgstr "App ID"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_res_config_settings__crm_fb_app_secret
+msgid "App Secret"
+msgstr "App Secret"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_page_view_form
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.actions.server,name:crm_lead_routing_facebook.crm_facebook_cron_ir_actions_server
+msgid "CRM: fetch Facebook Lead Ads leads"
+msgstr "CRM: descargar iniciativas de Facebook Lead Ads"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__campaign_id
+msgid "Campaign"
+msgstr "Campaña"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.actions.act_window,help:crm_lead_routing_facebook.action_crm_facebook_page
+msgid ""
+"Configure the App in Settings &gt; CRM &gt; Facebook Lead Ads and use "
+"\"Import Pages\"."
+msgstr ""
+"Configure la App en Ajustes &gt; CRM &gt; Facebook Lead Ads y use \"Importar"
+" páginas\"."
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.actions.act_window,help:crm_lead_routing_facebook.action_crm_facebook_page
+msgid "Connect your Facebook pages"
+msgstr "Conecte sus páginas de Facebook"
+
+#. module: crm_lead_routing_facebook
+#. odoo-python
+#: code:addons/crm_lead_routing_facebook/models/graph_api.py:0
+msgid "Could not reach Facebook: %s"
+msgstr "No se pudo consultar Facebook: %s"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.res_config_settings_view_form_facebook
+msgid ""
+"Create an App on developers.facebook.com, get the Lead Ads permissions "
+"approved in App Review and switch it to Live mode."
+msgstr ""
+"Cree una App en developers.facebook.com, pásela por App Review con los "
+"permisos de Lead Ads y póngala en modo Live."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__create_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__create_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__create_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__create_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__create_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__create_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__create_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__create_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_facebook_form_mapping
+msgid "Default Facebook Field Mapping"
+msgstr "Mapeo por defecto de campos de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.actions.act_window,name:crm_lead_routing_facebook.action_crm_facebook_form_mapping
+#: model:ir.ui.menu,name:crm_lead_routing_facebook.menu_crm_facebook_form_mapping
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_mapping_view_list
+msgid "Default Mapping"
+msgstr "Mapeo por defecto"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_graph__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_routing_rule__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_utm_campaign__display_name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_utm_medium__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_lead_view_form_facebook
+msgid "Facebook"
+msgstr "Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_ad_id
+msgid "Facebook Ad"
+msgstr "Anuncio de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_utm_medium__facebook_ad_id
+msgid "Facebook Ad ID"
+msgstr "ID anuncio Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_facebook_adset
+msgid "Facebook Ad Set"
+msgstr "Conjunto de anuncios de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.res_config_settings_view_form_facebook
+msgid "Facebook App"
+msgstr "App de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_campaign_id
+msgid "Facebook Campaign"
+msgstr "Campaña de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_utm_campaign__facebook_campaign_id
+msgid "Facebook Campaign ID"
+msgstr "ID campaña Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_date_create
+msgid "Facebook Date"
+msgstr "Fecha en Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__facebook_field
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__facebook_field
+msgid "Facebook Field"
+msgstr "Campo de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_form_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Facebook Form"
+msgstr "Formulario de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_facebook_form_field
+msgid "Facebook Form Field"
+msgstr "Campo de formulario de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.actions.act_window,name:crm_lead_routing_facebook.action_crm_facebook_form
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_routing_rule__facebook_form_ids
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_list
+msgid "Facebook Forms"
+msgstr "Formularios de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_facebook_graph
+msgid "Facebook Graph API Client"
+msgstr "Cliente Graph API de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.ui.menu,name:crm_lead_routing_facebook.menu_crm_facebook_root
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.res_config_settings_view_form_facebook
+msgid "Facebook Lead Ads"
+msgstr "Facebook Lead Ads"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_facebook_form
+msgid "Facebook Lead Ads Form"
+msgstr "Formulario de Facebook Lead Ads"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_lead_id
+msgid "Facebook Lead ID"
+msgstr "ID iniciativa Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_facebook_page
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_page_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_page_view_form
+msgid "Facebook Page"
+msgstr "Página de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.actions.act_window,name:crm_lead_routing_facebook.action_crm_facebook_page
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_page_view_list
+msgid "Facebook Pages"
+msgstr "Páginas de Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__team_id
+msgid "Fallback Team"
+msgstr "Equipo de respaldo"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__get_leads
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Fetch Leads"
+msgstr "Descargar iniciativas"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__field_ids
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Field Mapping"
+msgstr "Mapeo de campos"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__routing_rule_id
+msgid "Forced Rule"
+msgstr "Regla forzada"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__name
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__form_id
+msgid "Form"
+msgstr "Formulario"
+
+#. module: crm_lead_routing_facebook
+#. odoo-python
+#: code:addons/crm_lead_routing_facebook/models/crm_lead.py:0
+msgid "Form \"%s\": fallback team, team leader"
+msgstr "Formulario \"%s\": equipo de respaldo, líder del equipo"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__form_count
+msgid "Form Count"
+msgstr "Nº formularios"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__facebook_form_id
+msgid "Form ID"
+msgstr "ID de formulario"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__form_ids
+#: model:ir.ui.menu,name:crm_lead_routing_facebook.menu_crm_facebook_form
+msgid "Forms"
+msgstr "Formularios"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.view_crm_case_leads_filter_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.view_crm_case_opportunities_filter_facebook
+msgid "From Facebook"
+msgstr "De Facebook"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.res_config_settings_view_form_facebook
+msgid "Get Access Token"
+msgstr "Obtener token de acceso"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_res_config_settings__crm_fb_api_url_host
+msgid "Graph API URL"
+msgstr "URL de la Graph API"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Guess Mapping"
+msgstr "Proponer mapeo"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_graph__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_routing_rule__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_res_config_settings__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_utm_campaign__id
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_utm_medium__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,help:crm_lead_routing_facebook.field_crm_facebook_form__medium_id
+msgid "If empty, the Facebook ad is used as medium."
+msgstr "Si se deja vacío, se usa el anuncio de Facebook como medio."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,help:crm_lead_routing_facebook.field_crm_facebook_form__campaign_id
+msgid "If empty, the Facebook campaign of the ad is used."
+msgstr "Si se deja vacío, se usa la campaña de Facebook del anuncio."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,help:crm_lead_routing_facebook.field_crm_facebook_form__team_id
+msgid "If no rule matches, the lead is assigned to this team and its leader."
+msgstr ""
+"Si ninguna regla coincide, la iniciativa se asigna a este equipo y a su "
+"líder."
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_page_view_form
+msgid "Import Forms"
+msgstr "Importar formularios"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.res_config_settings_view_form_facebook
+msgid "Import Pages"
+msgstr "Importar páginas"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,help:crm_lead_routing_facebook.field_crm_facebook_form__get_leads
+msgid "Include this form in the scheduled download."
+msgstr "Incluir este formulario en la descarga periódica."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__last_fetch
+msgid "Last Fetch"
+msgstr "Última descarga"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__write_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__write_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__write_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__write_uid
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_adset__write_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__write_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__write_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__write_date
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_lead
+msgid "Lead"
+msgstr "Iniciativa"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__lead_count
+msgid "Lead Count"
+msgstr "Nº iniciativas"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_crm_routing_rule
+msgid "Lead Routing Rule"
+msgstr "Regla de enrutamiento de iniciativas"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Leads"
+msgstr "Iniciativas"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_res_config_settings__crm_fb_lookback_days
+msgid "Lookback Days"
+msgstr "Días a revisar"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Marketing (UTM)"
+msgstr "Marketing (UTM)"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,help:crm_lead_routing_facebook.field_res_config_settings__crm_fb_lookback_days
+msgid "Maximum age of the leads that are downloaded."
+msgstr "Antigüedad máxima de las iniciativas que se descargan."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__medium_id
+msgid "Medium"
+msgstr "Medio"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__odoo_field
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_mapping__odoo_field
+msgid "Odoo Field"
+msgstr "Campo en Odoo"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_lead__facebook_is_organic
+msgid "Organic"
+msgstr "Orgánico"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__page_id
+msgid "Page"
+msgstr "Página"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__access_token
+msgid "Page Access Token"
+msgstr "Token de acceso de la página"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__name
+msgid "Page ID"
+msgstr "ID de página"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_page__label
+msgid "Page Name"
+msgstr "Nombre de la página"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.ui.menu,name:crm_lead_routing_facebook.menu_crm_facebook_page
+msgid "Pages"
+msgstr "Páginas"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form_field__name
+msgid "Question"
+msgstr "Pregunta"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Read Fields"
+msgstr "Leer campos"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "Routing"
+msgstr "Enrutamiento"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,field_description:crm_lead_routing_facebook.field_crm_facebook_form__source_id
+msgid "Source"
+msgstr "Fuente"
+
+#. module: crm_lead_routing_facebook
+#: model_terms:ir.ui.view,arch_db:crm_lead_routing_facebook.crm_facebook_form_view_form
+msgid "The current mapping of this form will be replaced. Continue?"
+msgstr "Se reemplazará el mapeo actual del formulario. ¿Continuar?"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.fields,help:crm_lead_routing_facebook.field_crm_routing_rule__facebook_form_ids
+msgid "The rule only applies to leads coming from these forms."
+msgstr "La regla solo aplica a iniciativas que vengan de estos formularios."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_utm_medium_facebook_ad_unique
+msgid "This Facebook ad already exists."
+msgstr "Este anuncio de Facebook ya existe."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_crm_facebook_adset_facebook_adset_unique
+msgid "This Facebook ad set already exists."
+msgstr "Este conjunto de anuncios de Facebook ya existe."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_utm_campaign_facebook_campaign_unique
+msgid "This Facebook campaign already exists."
+msgstr "Esta campaña de Facebook ya existe."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_crm_facebook_form_field_field_unique
+msgid "This Facebook field is already mapped in this form."
+msgstr "El campo de Facebook ya está mapeado en este formulario."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_crm_lead_facebook_lead_unique
+msgid "This Facebook lead already exists."
+msgstr "Esta iniciativa de Facebook ya existe."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_crm_facebook_page_name_unique
+msgid "This Facebook page is already registered."
+msgstr "Esta página de Facebook ya está registrada."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model.constraint,message:crm_lead_routing_facebook.constraint_crm_facebook_form_form_unique
+msgid "This form is already registered."
+msgstr "Este formulario ya está registrado."
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_utm_campaign
+msgid "UTM Campaign"
+msgstr "Campaña UTM"
+
+#. module: crm_lead_routing_facebook
+#: model:ir.model,name:crm_lead_routing_facebook.model_utm_medium
+msgid "UTM Medium"
+msgstr "Medio UTM"
+
+#. module: crm_lead_routing_facebook
+#. odoo-python
+#: code:addons/crm_lead_routing_facebook/models/graph_api.py:0
+msgid "Unknown Facebook error"
+msgstr "Error desconocido de Facebook"

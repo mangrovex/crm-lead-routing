@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="crm_routing_rule_company_rule" model="ir.rule">
+            <field name="name">Routing rules: multi-company</field>
+            <field name="model_id" ref="model_crm_routing_rule"/>
+            <field name="domain_force">[('company_id', 'in', [False] + company_ids)]</field>
+        </record>
+        <record id="crm_routing_log_company_rule" model="ir.rule">
+            <field name="name">Routing log: multi-company</field>
+            <field name="model_id" ref="model_crm_routing_log"/>
+            <field name="domain_force">[('company_id', 'in', [False] + company_ids)]</field>
+        </record>
+    </data>
+</odoo>
